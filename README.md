@@ -27,7 +27,7 @@ Follow these steps to get the project running locally:
 
 ### 1. Clone & Install Dependencies
 
-````bash
+```bash
 git clone <your-repo-url>
 cd vdk-project
 composer install
@@ -35,12 +35,14 @@ npm install
 ```
 
 ### 2. Environment Setup
+
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
 ### 3. Database Configuration
+
 ```bash
 # For Windows (PowerShell)
 New-Item -ItemType File database/database.sqlite
@@ -50,6 +52,7 @@ touch database/database.sqlite
 ```
 
 Run the migrations and seed the database with sample inventory
+
 ```bash
 php artisan migrate:fresh --seed
 ```
@@ -57,14 +60,17 @@ php artisan migrate:fresh --seed
 This creates a test user: test@example.com with password password.
 
 ### 4. Development Servers
+
 You will need two terminal windows running
 
 Terminal 1 (PHP)
+
 ```bash
 php artisan serve
 ```
 
 Terminal 2 (Frontend)
+
 ```bash
 npm run dev
 ```
@@ -77,11 +83,9 @@ This project is configured to use the log driver by default for local developmen
 - When you trigger a password reset, open storage/logs/laravel.log.
 - The reset link will be written at the bottom of the log file.
 
- Project Highlights for Reviewers
+Project Highlights for Reviewers
 
 - Shared Components: Check resources/js/Components/VehicleCard.vue for a highly reusable component handling both Public and Admin states.
 - State Management: See resources/js/Pages/Admin/Vehicles/Index.vue for advanced Inertia router logic and query parameter synchronization.
 - Mobile Logic: View resources/js/Pages/Admin/Vehicles/Index.vue to see how VueUse Breakpoints are used to maintain a clean mobile experience.
 - RESTful Design: Review app/Http/Controllers/Admin/VehicleController.php for clean, resourceful routing and atomic status toggling.
-
-````
