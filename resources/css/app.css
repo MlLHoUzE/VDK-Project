@@ -1,0 +1,13 @@
+/**
+ * Main Application Stylesheet
+ * 
+ * This file serves as the entry point for Tailwind CSS.
+ * During the build process (Vite), these directives are replaced 
+ * with the generated CSS based on your utility class usage.
+ */
+/* 1. Base: Injects Tailwind's reset styles (Preflight) to ensure cross-browser consistency. */
+@tailwind base;
+/* 2. Components: Injects any component classes defined in your Tailwind config or plugins. */
+@tailwind components;
+/* 3. Utilities: Injects the utility classes (like 'flex', 'pt-4') used throughout your Vue templates. */
+@tailwind utilities;
