@@ -32,11 +32,13 @@ git clone <your-repo-url>
 cd vdk-project
 composer install
 npm install
+```
 
 ### 2. Environment Setup
 ```bash
 cp .env.example .env
 php artisan key:generate
+```
 
 ### 3. Database Configuration
 ```bash
@@ -45,10 +47,12 @@ New-Item -ItemType File database/database.sqlite
 
 # For Mac/Linux
 touch database/database.sqlite
+```
 
 Run the migrations and seed the database with sample inventory
 ```bash
 php artisan migrate:fresh --seed
+```
 
 This creates a test user: test@example.com with password password.
 
@@ -58,11 +62,12 @@ You will need two terminal windows running
 Terminal 1 (PHP)
 ```bash
 php artisan serve
+```
 
 Terminal 2 (Frontend)
 ```bash
 npm run dev
-
+```
 
 visit http://127.0.0.1:8000 to view the application
 
@@ -78,4 +83,5 @@ This project is configured to use the log driver by default for local developmen
 - State Management: See resources/js/Pages/Admin/Vehicles/Index.vue for advanced Inertia router logic and query parameter synchronization.
 - Mobile Logic: View resources/js/Pages/Admin/Vehicles/Index.vue to see how VueUse Breakpoints are used to maintain a clean mobile experience.
 - RESTful Design: Review app/Http/Controllers/Admin/VehicleController.php for clean, resourceful routing and atomic status toggling.
+
 ````
