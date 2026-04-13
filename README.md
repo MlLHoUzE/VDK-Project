@@ -2,7 +2,7 @@
 
 A professional-grade automotive inventory management application built with **Laravel 11**, **Vue 3**, and **Inertia.js**. This project features a dual-interface system for public browsing and administrative management.
 
-## 🚀 Key Features
+## Key Features
 
 - **Inertia.js SPA Architecture**: Seamless page transitions without full reloads.
 - **Dynamic View Toggle**: Admin dashboard supports both List and Gallery views with URL state persistence.
@@ -12,7 +12,7 @@ A professional-grade automotive inventory management application built with **La
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - **PHP 8.3+**
 - **Composer**
@@ -21,7 +21,7 @@ A professional-grade automotive inventory management application built with **La
 
 ---
 
-## 🏁 Getting Started
+## Getting Started
 
 Follow these steps to get the project running locally:
 
