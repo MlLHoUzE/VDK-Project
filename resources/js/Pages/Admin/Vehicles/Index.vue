@@ -10,6 +10,7 @@ import { PlusIcon, SquareArrowRightExit } from 'lucide-vue-next';
 import { watch } from 'vue';
 import { useBreakpoints, breakpointsTailwind } from '@vueuse/core';
 import VehicleCard from '@/Components/VehicleCard.vue';
+import { formatPrice } from '@/Utils/formatters';
 
 /**
  * Admin Vehicle Management Dashboard
@@ -65,13 +66,6 @@ watch(viewMode, (newMode) => {
     }
   );
 });
-
-const formatPrice = (value) =>
-  new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
 
 /**
  * Generic Modal Logic

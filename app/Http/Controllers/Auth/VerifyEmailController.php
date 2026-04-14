@@ -23,7 +23,7 @@ class VerifyEmailController extends Controller
     {
         // 1. Idempotency Check: If already verified, redirect immediately to the admin panel.
         if ($request->user()->hasVerifiedEmail()) {
-            return redirect()->intended(route('dashboard', absolute: false).'?verified=1');
+            return redirect()->intended(route('admin.vehicles.index', absolute: false).'?verified=1');
         }
 
         // 2. State Update: Persist the verification timestamp to the database.

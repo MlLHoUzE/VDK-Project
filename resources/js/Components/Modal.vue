@@ -29,6 +29,37 @@ const emit = defineEmits(['close']);
 const dialog = ref();
 const showSlot = ref(props.show);
 
+const openModal = () => {
+  document.body.style.overflow = 'hidden';
+  showSlot.value = true;
+  dialog.value?.showModal();
+};
+
+const closeModal = () => {
+  document.body.style.overflow = '';
+  setTimeout(() => {
+    dialog.value?.close();
+    showSlot.value = false;
+  }, 200);
+};
+
+// Handle subsequent prop changes
+watch(
+  () => props.show,
+  (show) => {
+    if (show) openModal();
+    else closeModal();
+  }
+);
+
+// Handle initial state on mount
+onMounted(() => {
+  if (props.show) openModal();
+
+  // Accessibility: Existing keydown listener
+  document.addEventListener('keydown', closeOnEscape);
+});
+
 /**
  * Sync logic between Vue state and native <dialog> state.
  * Manages body overflow to provide a seamless 'locked' experience.

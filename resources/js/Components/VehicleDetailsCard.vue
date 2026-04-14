@@ -1,5 +1,6 @@
 <script setup>
 import { router } from '@inertiajs/vue3';
+import { formatPrice } from '@/Utils/formatters';
 
 /**
  * Vehicle Details Card (Full Layout)
@@ -10,17 +11,6 @@ import { router } from '@inertiajs/vue3';
 const props = defineProps({
   vehicle: { type: Object, required: true }
 });
-
-const formatPrice = (value) =>
-  new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: 'CAD',
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
-
-const togglePublished = () => {
-  router.patch(route('admin.vehicles.toggle-published', props.vehicle.id));
-};
 </script>
 
 <template>

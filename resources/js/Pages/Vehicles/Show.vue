@@ -20,16 +20,6 @@ const props = defineProps({
     required: true
   }
 });
-
-/**
- * Utility: Formats price to CAD standards.
- */
-const formatPrice = (value) =>
-  new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: 'CAD',
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
 </script>
 
 <template>

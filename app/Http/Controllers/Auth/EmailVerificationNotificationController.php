@@ -24,7 +24,7 @@ class EmailVerificationNotificationController extends Controller
     {
         // UX: If the user verified their email in another tab, redirect them immediately.
         if ($request->user()->hasVerifiedEmail()) {
-            return redirect()->intended(route('dashboard', absolute: false));
+            return redirect()->intended(route('admin.vehicles.index', absolute: false));
         }
 
         /**

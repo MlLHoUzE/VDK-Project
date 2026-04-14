@@ -1,5 +1,6 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import { formatPrice } from '@/Utils/formatters';
 
 /**
  * Unified Vehicle Card
@@ -15,13 +16,6 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['toggle-published', 'delete']);
-
-const formatPrice = (value) =>
-  new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: 'CAD',
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
 </script>
 
 <template>

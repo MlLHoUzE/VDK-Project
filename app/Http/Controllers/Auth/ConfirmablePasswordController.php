@@ -51,6 +51,6 @@ class ConfirmablePasswordController extends Controller
         $request->session()->put('auth.password_confirmed_at', time());
 
         // Redirect: Returns the user to their intended destination (e.g., the Delete Account action).
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended(route('admin.vehicles.index', absolute: false));
     }
 }

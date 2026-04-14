@@ -23,16 +23,6 @@ const props = defineProps({
     default: 'list'
   }
 });
-/**
- * Utility: Formats price to USD.
- * Defaults to $0 if no price is present to prevent layout shift.
- */
-const formatPrice = (value) =>
-  new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: 'CAD',
-    maximumFractionDigits: 0
-  }).format(value ?? 0);
 </script>
 
 <template>
