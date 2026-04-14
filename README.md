@@ -28,7 +28,7 @@ Follow these steps to get the project running locally:
 ### 1. Clone & Install Dependencies
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/MlLHoUzE/VDK-Project
 cd vdk-project
 composer install
 npm install
