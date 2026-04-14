@@ -83,6 +83,20 @@ This project is configured to use the log driver by default for local developmen
 - When you trigger a password reset, open storage/logs/laravel.log.
 - The reset link will be written at the bottom of the log file.
 
+### 5. Running Tests
+
+Backend/Functional
+
+```bash
+php artisan test
+```
+
+Frontend/Unit
+
+```bash
+npm run test
+```
+
 Project Highlights for Reviewers
 
 - Shared Components: Check resources/js/Components/VehicleCard.vue for a highly reusable component handling both Public and Admin states.
